@@ -1,0 +1,15 @@
+<a class="back" href="#/list/{$ listIndex $}">Back</a>
+
+
+<div class="container col-md-8">
+
+		<h3>{$ taskName $}</h3>
+		<h2>Comment here:</h2>
+		<textarea class="form-control" rows="3" ng-model="taskComment"></textarea>
+		<button class="btn btn-primary col-lg-4 col-lg-offset-8" ng-click="addComment(listIndex, taskIndex, taskComment)">Save</button>
+
+		<div  class="well well-sm" style="margin: 0px; overflow: hidden;" ng-repeat="comment in comments">
+			<p>{$ comment $}</p>
+		</div>
+</div>
+	

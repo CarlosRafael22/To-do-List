@@ -1,0 +1,11 @@
+<a class="back" href="#/list/{$ lastIndex $}">Back</a>
+
+<div class="container col-md-8">
+		<h2>Create a task</h2>
+		<!-- <input type="text" ng-model="taskName"/> -->
+		<textarea class="form-control col-lg-8" ng-model="taskName"></textarea>
+		<label>Deadline: </label><input type="date" id="exampleInput" name="input" ng-model="deadline" required />
+		<button class="btn btn-primary" ng-click="addTask(lastIndex, taskName, deadline)">Save</button>
+
+</div>
+	

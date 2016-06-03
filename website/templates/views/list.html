@@ -1,0 +1,29 @@
+<a class="back" href="#/list">Back</a>
+
+<div class="container">
+<div class="col-md-6">
+	
+  <h2 class="subject"> {{listAccessed.name}} </h2>
+  <!-- <p>{{listsCreated}}</p> -->
+  <a href="#/list/{{lastIndex}}/createTask"><button class="btn btn-primary">Add task <i class="glyphicon glyphicon-edit"></i></button></a>
+  <button class="btn btn-danger">Delete list <i class="glyphicon glyphicon-trash"></i></button>
+
+</div>
+  
+<div class="col-md-6">
+	<h3>Estas sao as tuas tarefas: </h3>
+	<div class="well well-sm" ng-repeat="task in tasks">
+		<div style="overflow: hidden;">
+			<a href="#/list/{{lastIndex}}/task/{{$index}}">
+			<div class="col-md-8">
+				<h4>{{task.name}}</h4>
+				<p>{{task.deadline}}</p>
+			</div>
+			</a>
+			<!-- lastIndex eh o ID da list que a gnt esta e $index vai ser o ID da task, pq a gnt pega do ng-repeat -->
+			<a href="#/list/{{lastIndex}}/task/{{$index}}/editTask"><button class="btn btn-primary col-md-4">Edit task <i class="glyphicon glyphicon-trash"></i></button></a>
+		</div>
+		
+	</div>
+</div>
+</div>

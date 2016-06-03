@@ -1,0 +1,24 @@
+<div class="container">
+	<div class="col-md-8">
+		<h2>Create a list</h2>
+		<input type="text" ng-model="listName"/>
+		<button class="btn btn-primary" ng-click="addList()">Save</button>
+	</div>
+	
+
+	<div class="well well-sm col-md-8" ng-repeat="list in lists">
+		<h3 class="col-md-6" style="overflow: hidden;" ><a href="#/list/{$ $index $}">{$list.name$}</a></h3>
+		
+			<a href="#/list/{$ $index $}/editList"><button class="btn btn-primary">Edit <i class="glyphicon glyphicon-edit"></i></button></a>
+			<button class="btn btn-danger col-md-2" ng-click="deleteList($index)">Delete list <i class="glyphicon glyphicon-trash"></i></button>
+		
+	</div>
+</div>
+
+<!-- <div class="panel" ng-controller="HomeCtrl" >
+        <div ng-repeat="list in lists">
+            <h3>{$ list.title $}</h3>
+            <author>{$ list.author.username $}</author>
+        </div>
+        <p class="well">OI NESSA PORRA</p>
+    </div> -->

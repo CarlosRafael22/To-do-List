@@ -1,0 +1,24 @@
+<div class="container col-md-8">
+
+		<form class="form-horizontal">
+		  <div class="form-group">
+		    <label class="col-sm-2 control-label">Title</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" ng-model="taskName">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="col-sm-2 control-label">Deadline</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" ng-model="deadline">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-10">
+		      <button class="btn btn-default" ng-click="editTask(listIndex,taskIndex, taskName, deadline)">Save</button>
+		    </div>
+		  </div>
+		</form>
+
+
+</div>
